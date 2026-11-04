@@ -1,9 +1,15 @@
 # MambaRGS
-This repository provides supplementary materials for our IEEE RA-L submission:
 
-**MambaRGS: Efficient Referring Grasp Synthesis via Text-Image Cross-State Modulation and Rotation-Aware Decoding**
+This repository hosts project resources for our IEEE Robotics and Automation Letters (RA-L) paper:
 
-MambaRGS is a Mamba-based framework for **referring grasp synthesis**, which jointly performs language-guided object grounding and planar grasp prediction in cluttered robotic scenes. The proposed framework introduces a **Text-Image Cross-State Modulation (TICM)** module for fine-grained multi-modal interaction and a **Rotation-Aware Decoder (RAD)** for orientation-sensitive grasp prediction.
+**MambaRGS: Referring Grasp Synthesis via Text-Image Cross-State Modulation and Rotation-Adaptive Decoding**
+
+MambaRGS is a Mamba-based framework for **referring grasp synthesis (RGS)** that jointly predicts the referred object's pixel-wise mask and a planar grasp from an RGB image and a natural language expression in cluttered robotic scenes.
+
+The framework incorporates:
+
+- **Text-Image Cross-State Modulation (TICM):** a task-oriented module that couples visual context, global linguistic semantics, and local text-image correlations through three state-space branches and cross-state modulation.
+- **Rotation-Adaptive Decoder (RAD):** a decoder that adapts **Adaptive Rotated Convolution (ARC)** to language-conditioned multi-scale decoding, adjusting convolutional receptive patterns to local feature orientations for orientation-sensitive grasp prediction. ARC is an existing operator adopted in this framework.
 
 ![MambaRGS Framework](./frame.png)
 
